@@ -65,6 +65,33 @@ class Builder extends QueryBuilder
     }
 
     /**
+     * @param array $values
+     * @return int
+     */
+    public function insert(array $values)
+    {
+        $result = parent::insert($values);
+
+        $this->flush();
+
+        return $result;
+    }
+
+    /**
+     * @param array $values
+     * @param $sequence
+     * @return int
+     */
+    public function insertGetId(array $values, $sequence = null)
+    {
+        $result = parent::insertGetId($values, $sequence);
+
+        $this->flush();
+
+        return $result;
+    }
+
+    /**
      * @param $id
      * @return int
      */
