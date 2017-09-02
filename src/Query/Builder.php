@@ -2,7 +2,9 @@
 
 namespace TelcoLAB\Cacher\Query;
 
+use Illuminate\Cache\TaggableStore;
 use Illuminate\Database\Query\Builder as QueryBuilder;
+use TelcoLAB\Cacher\Exceptions\UnsupportedCacheDriverException;
 
 class Builder extends QueryBuilder
 {
@@ -90,7 +92,11 @@ class Builder extends QueryBuilder
      */
     public function getCacheInstance()
     {
-        return $this->cacheInstance ?? $this->cacheInstance = cache()->tags($this->getCacheTag());
+        if (cache()->getStore() instanceof TaggableStore) {
+            return $this->cacheInstance ?? $this->cacheInstance = cache()->tags($this->getCacheTag());
+        }
+
+        throw new UnsupportedCacheDriverException("Cache driver must be extended from \Illuminate\Cache\TaggableStore.");
     }
 
     /**
