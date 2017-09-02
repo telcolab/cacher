@@ -1,6 +1,6 @@
 {
     "name": "telcolab/cacher",
-    "description": "Package that providing the ability to automatically cache Eloquent results.",
+    "description": "A Laravel's package that automatically cache and invalidate Eloquent queries.",
     "homepage": "https://github.com/telcolab/cacher",
     "keywords": ["laravel", "cache", "eloquent"],
     "support": {
