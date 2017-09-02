@@ -1,0 +1,28 @@
+{
+    "name": "telcolab/cacher",
+    "description": "Package that providing the ability to automatically cache Eloquent results.",
+    "homepage": "https://github.com/telcolab/cacher",
+    "keywords": ["laravel", "cache", "eloquent"],
+    "support": {
+        "issues": "https://github.com/telcolab/cacher/issues",
+        "source": "https://github.com/telcolab/cacher"
+    },
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Haries Nur Ikhwan",
+            "email": "haries@telcolab.my"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/database": "5.5.*",
+        "illuminate/cache": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "TelcoLAB\\Cacher\\": "src/"
+        }
+    }
+}
