@@ -160,4 +160,35 @@ class Builder extends QueryBuilder
     {
         return $this->getCacheInstance()->flush();
     }
+
+    /**
+     * @param int $minutes
+     * @return $this
+     */
+    public function remember(int $minutes)
+    {
+        $this->setCacheExpireAfter($minutes);
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function dontRemember()
+    {
+        $this->remember(0);
+
+        return $this;
+    }
+
+    /**
+     * @return $this
+     */
+    public function rememberForever()
+    {
+        $this->remember(-1);
+
+        return $this;
+    }
 }
