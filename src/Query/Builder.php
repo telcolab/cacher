@@ -31,7 +31,7 @@ class Builder extends QueryBuilder
     /**
      * @var int
      */
-    protected $cacheExpireAfer;
+    protected $cacheExpireAfter;
 
     /**
      * @return array
@@ -166,7 +166,7 @@ class Builder extends QueryBuilder
      */
     public function getCacheExpiry()
     {
-        return $this->cacheExpireAfer;
+        return $this->cacheExpireAfter;
     }
 
     /**
@@ -175,7 +175,7 @@ class Builder extends QueryBuilder
      */
     public function setCacheExpireAfter(int $minutes)
     {
-        $this->cacheExpireAfer = $minutes;
+        $this->cacheExpireAfter = $minutes;
 
         return $this;
     }
