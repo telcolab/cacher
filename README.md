@@ -1,6 +1,6 @@
 # Cacher - Caching Eloquent Query
 
-
+[![Latest Stable Version](https://poser.pugx.org/telcolab/cacher/v/stable)](https://packagist.org/packages/telcolab/cacher) [![Latest Unstable Version](https://poser.pugx.org/telcolab/cacher/v/unstable)](https://packagist.org/packages/telcolab/cacher) [![Total Downloads](https://poser.pugx.org/telcolab/cacher/downloads)](https://packagist.org/packages/telcolab/cacher) [![License](https://poser.pugx.org/telcolab/cacher/license)](https://packagist.org/packages/telcolab/cacher)
 
 Cacher is a package that automatically cache Eloquent query. With **Cacher** it's super easy to cache all eloquent query **including relationships**. 
 
