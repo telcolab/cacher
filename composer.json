@@ -17,8 +17,8 @@
     ],
     "require": {
         "php": ">=7.0",
-        "illuminate/database": "5.5.*",
-        "illuminate/cache": "5.5.*"
+        "illuminate/database": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
+        "illuminate/cache": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*"
     },
     "autoload": {
         "psr-4": {
